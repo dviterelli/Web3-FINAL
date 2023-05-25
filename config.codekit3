@@ -524,14 +524,6 @@
       "oAP" : "\/deploy\/checkout.html",
       "oF" : 2
     },
-    "\/dev\/content\/buynow.kit" : {
-      "cB" : 0,
-      "ft" : 2048,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/dev\/content\/buynow.html",
-      "oF" : 0
-    },
     "\/dev\/content\/checkout\/payment&shipping.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -548,36 +540,44 @@
       "oAP" : "\/dev\/content\/checkout\/topcards.html",
       "oF" : 1
     },
-    "\/dev\/content\/features.kit" : {
+    "\/dev\/content\/product\/buynow.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/dev\/content\/features.html",
+      "oAP" : "\/dev\/content\/product\/buynow.html",
       "oF" : 0
     },
-    "\/dev\/content\/gallery.kit" : {
+    "\/dev\/content\/product\/features.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/dev\/content\/gallery.html",
+      "oAP" : "\/dev\/content\/product\/features.html",
       "oF" : 0
     },
-    "\/dev\/content\/hero.kit" : {
+    "\/dev\/content\/product\/gallery.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/dev\/content\/hero.html",
+      "oAP" : "\/dev\/content\/product\/gallery.html",
       "oF" : 0
     },
-    "\/dev\/content\/reviews.kit" : {
+    "\/dev\/content\/product\/hero.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/dev\/content\/reviews.html",
+      "oAP" : "\/dev\/content\/product\/hero.html",
+      "oF" : 0
+    },
+    "\/dev\/content\/product\/reviews.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/product\/reviews.html",
       "oF" : 0
     },
     "\/dev\/content\/thankyou\/ordersummary.kit" : {
