@@ -1,3 +1,47 @@
 /* =============
     Header
 ============= */
+
+header{
+    background-color: var(--purple);
+    color: white;
+
+   display: grid;
+   grid-template-columns: 16px auto 16px;
+   grid-template-areas: ". header .";
+
+   @include xl{
+    grid-template-columns: auto 1200px auto;
+   }
+
+   >div{
+
+    #logo{
+        margin: 16px;
+    }
+
+    grid-area: header;
+
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas:"logo, nav";
+
+    @include md{
+        grid-template-columns: 60% auto;
+    }
+
+    @include lg{
+        grid-template-columns: 70% auto;
+    }
+    
+    #nav{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img{
+            height: 45%;
+        }
+    }
+   }
+}

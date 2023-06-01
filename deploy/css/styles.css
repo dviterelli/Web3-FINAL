@@ -370,6 +370,46 @@ textarea {
 /* =============
     Header
 ============= */
+header {
+  background-color: var(--purple);
+  color: white;
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". header .";
+}
+@media (min-width: 1200px) {
+  header {
+    grid-template-columns: auto 1200px auto;
+  }
+}
+header > div {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-template-areas: "logo, nav";
+}
+header > div #logo {
+  margin: 16px;
+}
+@media (min-width: 768px) {
+  header > div {
+    grid-template-columns: 60% auto;
+  }
+}
+@media (min-width: 1024px) {
+  header > div {
+    grid-template-columns: 70% auto;
+  }
+}
+header > div #nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header > div #nav img {
+  height: 45%;
+}
+
 /* =============
     Footer
 ============= */
@@ -383,7 +423,7 @@ footer {
 }
 @media (min-width: 768px) {
   footer {
-    padding: 24px 0 32px;
+    padding: 24px;
   }
 }
 @media (min-width: 1440px) {
@@ -404,7 +444,7 @@ footer > div {
 }
 @media (min-width: 1024px) {
   footer > div {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-areas: "f1 f1 f2 f3 f4 f5";
   }
 }
@@ -413,8 +453,10 @@ footer > div {
     grid-area: f1;
   }
 }
-footer > div #f1 #logos {
-  display: flex justify-content space-evenly;
+footer > div #f1 ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
 }
 @media (min-width: 768px) {
   footer > div #f2 {
@@ -435,4 +477,33 @@ footer > div #f1 #logos {
   footer > div #f5 {
     grid-area: f5;
   }
+}
+
+#thankyoutop {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". thankyou .";
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  #thankyoutop {
+    grid-template-columns: auto 1200px auto;
+  }
+}
+#thankyoutop > div {
+  grid-area: thankyou;
+}
+
+#summary {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". thankyou .";
+}
+@media (min-width: 1200px) {
+  #summary {
+    grid-template-columns: auto 1200px auto;
+  }
+}
+#summary > div {
+  grid-area: thankyou;
 }

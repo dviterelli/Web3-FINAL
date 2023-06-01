@@ -12,7 +12,7 @@ footer{
     padding: 16px 0 24px;
 
     @include md{
-        padding: 24px 0 32px;
+        padding: 24px;
     }
 
     @include xxl{
@@ -33,7 +33,7 @@ footer{
         }
 
         @include lg{
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(6,1fr);
             grid-template-areas: 
             "f1 f1 f2 f3 f4 f5";
         }
@@ -42,9 +42,12 @@ footer{
             @include md{
                 grid-area: f1;
             }
-            #logos{
-                display: flex
-                justify-content space-evenly;
+
+            ul{
+                display:flex;
+                justify-content: flex-start;
+                gap: 16px;
+            
             }
         }
 
