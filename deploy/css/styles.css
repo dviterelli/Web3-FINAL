@@ -13,7 +13,12 @@ html {
 :root {
   --black: #000000;
   --white: #ffffff;
+  --grey-light: #9795B5;
+  --grey-dark: #78707B;
+  --sky: #77ABCD;
+  --navy: #2E4163;
   --purple: #573B7C;
+  --pink: #D1306A;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -492,18 +497,22 @@ footer > div #f5 ul li {
   padding-bottom: 16px;
 }
 
-#thankyoutop {
+#order {
+  background-color: red;
+}
+
+#hero-thanks {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". thankyou .";
   text-align: center;
 }
 @media (min-width: 1200px) {
-  #thankyoutop {
+  #hero-thanks {
     grid-template-columns: auto 1200px auto;
   }
 }
-#thankyoutop > div {
+#hero-thanks > div {
   grid-area: thankyou;
 }
 

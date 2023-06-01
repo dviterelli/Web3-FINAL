@@ -524,20 +524,20 @@
       "oAP" : "\/deploy\/checkout.html",
       "oF" : 2
     },
-    "\/dev\/content\/checkout\/payment&shipping.kit" : {
+    "\/dev\/content\/checkout\/forms.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/dev\/content\/checkout\/payment&shipping.html",
+      "oAP" : "\/dev\/content\/checkout\/forms.html",
       "oF" : 1
     },
-    "\/dev\/content\/checkout\/topcards.kit" : {
+    "\/dev\/content\/checkout\/order.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/dev\/content\/checkout\/topcards.html",
+      "oAP" : "\/dev\/content\/checkout\/order.html",
       "oF" : 1
     },
     "\/dev\/content\/product\/buynow.kit" : {
@@ -580,20 +580,20 @@
       "oAP" : "\/dev\/content\/product\/reviews.html",
       "oF" : 0
     },
-    "\/dev\/content\/thankyou\/ordersummary.kit" : {
+    "\/dev\/content\/thankyou\/hero-thanks.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/dev\/content\/thankyou\/ordersummary.html",
+      "oAP" : "\/dev\/content\/thankyou\/hero-thanks.html",
       "oF" : 1
     },
-    "\/dev\/content\/thankyou\/thankyoutop.kit" : {
+    "\/dev\/content\/thankyou\/summary.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/dev\/content\/thankyou\/thankyoutop.html",
+      "oAP" : "\/dev\/content\/thankyou\/summary.html",
       "oF" : 1
     },
     "\/dev\/global\/footer.kit" : {
@@ -792,6 +792,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/dev\/scss\/layout\/_header.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/dev\/scss\/sections\/checkout.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/scss\/sections\/checkout.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
