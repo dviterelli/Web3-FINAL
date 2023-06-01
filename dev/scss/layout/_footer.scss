@@ -9,28 +9,28 @@ footer{
     background-color: var(--purple);
     color: var(--white);
 
-    padding: 16px 0 24px;
+   padding-top: 32px;
+   padding-bottom: 48px;
 
-    @include md{
-        padding: 24px;
+    @include lg{
+        padding-top: 64px;
+        padding-bottom: 64px;
     }
 
-    @include xxl{
+    @include xl{
         grid-template-columns: auto 1200px auto;
     }
 
     >div{
         grid-area: footer;
 
-        @include md{
-            display: grid;
-            grid-template-columns: 50% auto;
-            grid-template-areas: 
-            "f1 f1"
-            "f2 f3"
-            "f4 f5";
-            gap: 16px;
-        }
+        display: grid;
+        grid-template-columns: 50% auto;
+        grid-template-areas: 
+        "f1 f1"
+        "f2 f3"
+        "f4 f5";
+        gap: 16px;
 
         @include lg{
             grid-template-columns: repeat(6,1fr);
@@ -39,9 +39,9 @@ footer{
         }
 
         #f1{
-            @include md{
-                grid-area: f1;
-            }
+            grid-area: f1;
+
+            padding-right: 64px;
 
             ul{
                 display:flex;
@@ -52,27 +52,63 @@ footer{
         }
 
         #f2{
-            @include md{
-                grid-area: f2;
-            }  
+            grid-area: f2;
+
+            ul{
+
+                li{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: left;
+                    padding-bottom: 16px;
+                }
+                
+            }
         }
 
         #f3{
-            @include md{
-                grid-area: f3;
-            }  
+            grid-area: f3; 
+
+            ul{
+
+                li{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: left;
+                    padding-bottom: 16px;
+                }
+                
+            }
         }
         
         #f4{
-            @include md{
-                grid-area: f4;
-            }  
+            grid-area: f4; 
+
+            ul{
+
+                li{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: left;
+                    padding-bottom: 16px;
+                }
+                
+            }
         }
 
         #f5{
-            @include md{
-                grid-area: f5;
-            }  
+            grid-area: f5;
+
+            ul{
+
+                li{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: left;
+                    padding-bottom: 16px;
+                }
+                
+            }
         }
     }
 }
