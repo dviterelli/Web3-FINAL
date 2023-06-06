@@ -498,22 +498,85 @@ footer > div #f5 ul li {
 }
 
 #order {
-  background-color: red;
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". order .";
+}
+@media (min-width: 1024px) {
+  #order {
+    grid-template-columns: auto 1024px auto;
+  }
+}
+#order > div {
+  grid-area: order;
+}
+#order > div h1 {
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--black);
+}
+#order > div .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 24px;
+}
+@media (min-width: 768px) {
+  #order > div .card {
+    flex-direction: row;
+  }
+}
+#order > div #subtotal {
+  border-top: 2px solid var(--black);
+  display: flex;
+  justify-content: space-between;
 }
 
-#hero-thanks {
+#forms {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". forms .";
+}
+@media (min-width: 1024px) {
+  #forms {
+    grid-template-columns: auto 1024px auto;
+  }
+}
+#forms > div {
+  grid-area: forms;
+  display: grid;
+  grid-template-columns: auto, 50%;
+  grid-template-areas: "quick payment";
+}
+#forms > div #quick {
+  grid-area: quick;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#forms > div #payment {
+  grid-area: payment;
+}
+
+#thanks-hero {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". thankyou .";
   text-align: center;
 }
 @media (min-width: 1200px) {
-  #hero-thanks {
+  #thanks-hero {
     grid-template-columns: auto 1200px auto;
   }
 }
-#hero-thanks > div {
+#thanks-hero > div {
   grid-area: thankyou;
+}
+#thanks-hero > div img {
+  margin-top: 48px;
+  margin-bottom: 24px;
+  width: 40vh;
 }
 
 #summary {
@@ -521,11 +584,57 @@ footer > div #f5 ul li {
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". thankyou .";
 }
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   #summary {
-    grid-template-columns: auto 1200px auto;
+    grid-template-columns: auto 1024px auto;
   }
 }
 #summary > div {
   grid-area: thankyou;
+}
+@media (min-width: 768px) {
+  #summary > div {
+    display: grid;
+    grid-template-columns: auto, 50%;
+    grid-template-areas: "payment summary";
+  }
+}
+#summary > div #payment {
+  grid-area: payment;
+  border-bottom: 2px solid var(--black);
+}
+#summary > div #order-summary {
+  grid-area: summary;
+  border-bottom: 2px solid var(--black);
+}
+#summary > div #order-summary #sub {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#summary > div #order-summary #ship {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#summary > div #order-summary #tax {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--black);
+}
+#summary > div #order-summary #total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+#summary > div #shipping-info button {
+  background-color: var(--navy);
+  color: white;
+  padding: 18px, 24px;
+}
+#summary > div img {
+  padding: 16px;
+  margin-bottom: 48px;
 }

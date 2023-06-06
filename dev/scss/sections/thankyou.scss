@@ -1,4 +1,5 @@
-#hero-thanks{
+#thanks-hero{
+
     display:grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". thankyou .";
@@ -11,6 +12,12 @@
 
     >div{
         grid-area: thankyou;
+
+        img{
+            margin-top: 48px;
+            margin-bottom: 24px;
+            width: 40vh;
+        }
     }
 }
 
@@ -20,11 +27,67 @@
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". thankyou .";
 
-    @include xl{
-        grid-template-columns: auto 1200px auto;
+    @include lg{
+        grid-template-columns: auto 1024px auto;
     }
     
     >div{
         grid-area: thankyou;
+
+        @include md{
+            display: grid;
+            grid-template-columns: auto, 50%;
+            grid-template-areas: "payment summary";
+        }
+
+        #payment{
+            grid-area: payment;
+            border-bottom: 2px solid var(--black);
+        }
+
+        #order-summary{
+            grid-area: summary;
+            border-bottom: 2px solid var(--black);
+            #sub{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            #ship{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            #tax{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                border-bottom: 1px solid var(--black);
+                
+            }
+
+            #total{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 16px;
+            }
+        }
+
+        #shipping-info{
+            button{
+                background-color: var(--navy);
+                color: white;
+                padding: 18px, 24px;
+            }
+        }
+
+        img{
+            padding: 16px;
+            margin-bottom: 48px;
+        
+        }
     }    
 }

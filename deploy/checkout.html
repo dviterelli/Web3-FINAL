@@ -30,67 +30,82 @@
          </div>
      </header>
       <section id="order">
-              <h1>My Cart</h1>
-              <div id="card-premium">
-                  <img src="img/checkout/checkout1.jpg" alt="premium img">
-                  <h3>Stratos Premium Package</h3>
-                  <p>Shark® Stratos™ Upright Vacuum TruePet® upgrade & Steam Mop</p>
-                  <h3>$499</h3>
-                  <h5>QTY: 1</h5>
+              <div>
+                  <h1>My Cart</h1>
+                  <div class="card" id="card-premium">
+                      <img src="img/checkout/checkout1.jpg" alt="premium img">
+                      <div>
+                          <h3>Stratos Premium Package</h3>
+                          <p>Shark® Stratos™ Upright Vacuum TruePet® upgrade & Steam Mop</p>
+                      </div>
+                      <div>
+                          <h3>$499</h3>
+                          <h5>QTY: 1</h5>
+                      </div>
+                  </div>
+              
+                  <div class="card" id="card-basic">
+                      <img src="img/checkout/checkout2.jpg" alt="basic img">
+                      <div>
+                          <h3>Stratos Basic Package</h3>
+                          <p>Our standard, heavy-duty vacuum to handle all the toughest pet messes. </p>
+                      </div>
+                      <div>
+                          <h3>$420</h3>
+                          <h5>QTY: 1</h5>
+                      </div>
+                  
+                  </div>
+                  <div id="subtotal">
+                      <h3>Subtotal:</h3>
+                      <h3>$909.00</h3>
+                  </div>
               </div>
-          
-              <div id="card-basic">
-                  <img src="img/checkout/checkout2.jpg" alt="basic img">
-                  <h3>Stratos Basic Package</h3>
-                  <p>Our standard, heavy-duty vacuum to handle all the toughest pet messes. </p>
-                  <h3>$420</h3>
-                  <h5>QTY: 1</h5>
-              </div>
-              <aside>
-                  <h3>Subtotal:</h3>
-                  <h3>$909.00</h3>
-              </aside>
-           </section>
+          </section>
      <section id="forms">
                    <div>
-                       <h3>Quick Checkout</h3>
-                       <img src="img/checkout/applepay.svg" alt="Applepay">
-                       <img src="img/checkout/paypal.svg" alt="Paypal">
-                       <img src="img/checkout/shoppay.svg" alt="Shop Pay">
-                       <img src="img/checkout/klarna.svg" alt="Klarna">
-                   </div>
-                   
-                   <div>
-                       <section id="payment">
-                           <form action="#">
-                               <input type="name" placeholder="Name"> </form> 
-                           <form action="#">
-                                   <input type="email" placeholder="Email Address"> </form>
-                           <form action="#">
-                               <input type="card #" placeholder="Card No."> </form> 
-                           <form action="#">
-                               <input type="exp month" placeholder="Expiration Month"> </form> 
-                           <form action="#">
-                               <input type="exp year" placeholder="Expiration Year"> </form> 
-                           <form action="#">
-                               <input type="sec code" placeholder="Security Code"> </form> 
-                       </section>
+                       <div id="quick">
+                           <h2>Quick Checkout</h2>
+                           <img src="img/checkout/applepay.svg" alt="Applepay">
+                           <img src="img/checkout/paypal.svg" alt="Paypal">
+                           <img src="img/checkout/shoppay.svg" alt="Shop Pay">
+                           <img src="img/checkout/klarna.svg" alt="Klarna">
+                       </div>
                        
-                       <section id="shipping">
-                           <form action="#">
-                               <input type="name" placeholder="Name"> </form> 
-                           <form action="#">
-                                   <input type="address" placeholder="Shipping Address Line 1"> </form>
-                           <form action="#">
-                               <input type="address" placeholder="Line 2"> </form> 
-                           <form action="#">
-                               <input type="state" placeholder="State / Province"> </form> 
-                           <form action="#">
-                               <input type="country" placeholder="Country"> </form> 
-                           <form action="#">
-                               <input type="zip code" placeholder="Zip / Postal Code"> </form>
-                       </section>
-                       <button>Continue</button>
+                       <div id="payment">
+                           <section id="card-info">
+                               <h2>Payment</h2>
+                               <form action="#">
+                                   <input type="name" placeholder="Name"> </form> 
+                               <form action="#">
+                                       <input type="email" placeholder="Email Address"> </form>
+                               <form action="#">
+                                   <input type="card #" placeholder="Card No."> </form> 
+                               <form action="#">
+                                   <input type="exp month" placeholder="Expiration Month"> </form> 
+                               <form action="#">
+                                   <input type="exp year" placeholder="Expiration Year"> </form> 
+                               <form action="#">
+                                   <input type="sec code" placeholder="Security Code"> </form> 
+                           </section>
+                           
+                           <section id="shipping">
+                               <h2>Shipping</h2>
+                               <form action="#">
+                                   <input type="name" placeholder="Name"> </form> 
+                               <form action="#">
+                                       <input type="address" placeholder="Shipping Address Line 1"> </form>
+                               <form action="#">
+                                   <input type="address" placeholder="Line 2"> </form> 
+                               <form action="#">
+                                   <input type="state" placeholder="State / Province"> </form> 
+                               <form action="#">
+                                   <input type="country" placeholder="Country"> </form> 
+                               <form action="#">
+                                   <input type="zip code" placeholder="Zip / Postal Code"> </form>
+                           </section>
+                           <button>Continue</button>
+                       </div>
                    </div>
                </section>
      <footer>

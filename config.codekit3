@@ -580,20 +580,20 @@
       "oAP" : "\/dev\/content\/product\/reviews.html",
       "oF" : 0
     },
-    "\/dev\/content\/thankyou\/hero-thanks.kit" : {
-      "cB" : 0,
-      "ft" : 2048,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/dev\/content\/thankyou\/hero-thanks.html",
-      "oF" : 1
-    },
     "\/dev\/content\/thankyou\/summary.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/dev\/content\/thankyou\/summary.html",
+      "oF" : 1
+    },
+    "\/dev\/content\/thankyou\/thanks-hero.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/thankyou\/thanks-hero.html",
       "oF" : 1
     },
     "\/dev\/global\/footer.kit" : {

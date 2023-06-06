@@ -1,3 +1,70 @@
 #order{
-  background-color: red;
+  display:grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". order .";
+
+  @include lg{
+      grid-template-columns: auto 1024px auto;
+  }
+  
+  >div{
+      grid-area: order;
+
+      h1{
+        padding-bottom: 16px;
+        border-bottom: 2px solid var(--black);
+      }
+
+    .card{
+      display:flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content: space-between;
+      
+      @include md{
+        flex-direction: row;
+      }
+
+      padding-top: 16px;
+      padding-bottom: 24px;
+    }
+
+    #subtotal{
+      border-top: 2px solid var(--black);
+
+      display:flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+#forms{
+  display:grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". forms .";
+
+  @include lg{
+      grid-template-columns: auto 1024px auto;
+  }
+  
+  >div{
+    grid-area: forms;
+
+    display: grid;
+    grid-template-columns: auto, 50%;
+    grid-template-areas: "quick payment";
+
+    #quick{
+      grid-area: quick;
+
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #payment{
+      grid-area: payment;
+    }
+
+  }
 }
