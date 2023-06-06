@@ -524,6 +524,56 @@ footer > div #f5 ul li {
   grid-area: type;
 }
 
+#buynow {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". content.";
+}
+@media (min-width: 768px) {
+  #buynow {
+    grid-template-columns: auto 768px auto;
+  }
+}
+#buynow > div {
+  grid-area: content;
+}
+@media (min-width: 768px) {
+  #buynow > div {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: "left-card right-card";
+  }
+}
+#buynow > div .buy-card {
+  padding: 32px;
+  border-radius: 24px;
+  margin: 16px;
+}
+#buynow > div .buy-card button {
+  color: white;
+  background-color: var(--pink);
+}
+#buynow > div .buy-card-info ul li {
+  display: flex;
+  justify-content: left;
+  gap: 16px;
+}
+#buynow > div #buy-card-left {
+  grid-area: left-card;
+  border: 2px solid var(--navy);
+}
+#buynow > div #buy-card-left > div {
+  border-bottom: 1px solid var(--black);
+}
+#buynow > div #buy-card-right {
+  grid-area: right-card;
+  background-color: var(--navy);
+  color: white;
+}
+#buynow > div #buy-card-right > div {
+  border-bottom: 1px solid var(--white);
+}
+
 #order {
   display: grid;
   grid-template-columns: 16px auto 16px;
