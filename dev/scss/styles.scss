@@ -19,5 +19,11 @@
 @import "layout/_footer";
 
 // Sections Styles
+@import "sections/product/hero.scss";
+@import "sections/product/features.scss";
+@import "sections/product/gallery.scss";
+@import "sections/product/reviews.scss";
+@import "sections/product/buynow.scss";
+
 @import "sections/checkout.scss";
 @import "sections/thankyou.scss";

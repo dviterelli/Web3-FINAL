@@ -378,6 +378,10 @@ textarea {
 header {
   background-color: var(--purple);
   color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". header .";
@@ -497,6 +501,29 @@ footer > div #f5 ul li {
   padding-bottom: 16px;
 }
 
+#hero {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". hero .";
+}
+#hero > div {
+  grid-area: hero;
+}
+@media (min-width: 1024px) {
+  #hero > div #card {
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-template-areas: "img type";
+  }
+}
+#hero > div #card #hero-img {
+  grid-area: img;
+}
+#hero > div #card #in-the-box {
+  grid-area: type;
+}
+
 #order {
   display: grid;
   grid-template-columns: 16px auto 16px;
@@ -545,9 +572,13 @@ footer > div #f5 ul li {
 }
 #forms > div {
   grid-area: forms;
-  display: grid;
-  grid-template-columns: auto, 50%;
-  grid-template-areas: "quick payment";
+}
+@media (min-width: 768px) {
+  #forms > div {
+    display: grid;
+    grid-template-columns: 30%, auto;
+    grid-template-areas: "quick payment";
+  }
 }
 #forms > div #quick {
   grid-area: quick;
@@ -574,7 +605,7 @@ footer > div #f5 ul li {
   grid-area: thankyou;
 }
 #thanks-hero > div img {
-  margin-top: 48px;
+  margin-top: 104px;
   margin-bottom: 24px;
   width: 40vh;
 }

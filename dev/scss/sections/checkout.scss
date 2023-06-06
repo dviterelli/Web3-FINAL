@@ -50,10 +50,12 @@
   >div{
     grid-area: forms;
 
+  @include md{
     display: grid;
-    grid-template-columns: auto, 50%;
+    grid-template-columns: 30%, auto;
     grid-template-areas: "quick payment";
-
+  }
+    
     #quick{
       grid-area: quick;
 

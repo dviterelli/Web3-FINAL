@@ -1,0 +1,25 @@
+#hero{
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". hero .";
+
+    >div{
+        grid-area: hero;
+    #card{
+        @include lg{
+            display: grid;
+            grid-template-columns: 60% auto;
+            grid-template-areas: "img type";
+        }
+
+            #hero-img{
+                grid-area: img;
+            }
+
+            #in-the-box{
+                grid-area: type;
+            }
+        }
+    }
+}
