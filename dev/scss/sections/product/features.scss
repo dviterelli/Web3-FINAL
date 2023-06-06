@@ -1,0 +1,43 @@
+#features{
+    display:grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". features .";
+
+    @include lg{
+        grid-template-columns: auto 1024px auto;
+    }
+    
+    >div{
+        grid-area: features;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        "ft ft ft"
+        "f1 f2 f3";
+
+        .card{
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            p{
+                word-wrap: normal;
+            }
+        }
+
+        #ft{
+            grid-area: ft;
+        }
+
+        #f1{
+            grid-area: f1;
+        } 
+
+         #f2{
+            grid-area: f2;
+        }  
+
+        #f3{
+            grid-area: f3;
+        }
+    }
+}
