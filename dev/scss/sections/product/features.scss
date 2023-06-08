@@ -10,17 +10,19 @@
     >div{
         grid-area: features;
 
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
-        "ft ft ft"
-        "f1 f2 f3";
+        "ft ft ft ft"
+        "f1 f2 f3 f4";
 
         .card{
             display: flex; 
             flex-direction: column;
             align-items: center;
+            margin-right: 8px;
             p{
-                word-wrap: normal;
+                text-align: center;
             }
         }
 

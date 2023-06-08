@@ -1,22 +1,28 @@
 #hero{
-    margin-top: 64px;
+    margin-top: 96px;
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". hero .";
 
     >div{
         grid-area: hero;
-    #card{
-        @include lg{
-            display: grid;
-            grid-template-columns: 60% auto;
-            grid-template-areas: "img type";
-        }
+
+        #card{
+            @include lg{
+                display: grid;
+                grid-template-columns: 60% auto;
+                grid-template-areas: "img type";
+            }
 
             #hero-img{
                 grid-area: img;
-            }
 
+                background-image: url("../img/hero/hero.jpg");
+                background-size: cover;
+                width: 690px;
+                height: 690px;
+            }
+            
             #in-the-box{
                 grid-area: type;
             }

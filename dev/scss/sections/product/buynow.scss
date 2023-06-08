@@ -3,6 +3,8 @@
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". content.";
+    margin-bottom: 144px;
+    margin-top: 96px;
 
     @include md{
     grid-template-columns: auto 768px auto;
@@ -13,8 +15,11 @@
 
         @include md{
             display: grid;
-            grid-template-columns: 50% auto;
-            grid-template-areas: "left-card right-card";
+            grid-template-columns: repeat (2, 1fr);
+            grid-template-areas: 
+            "bt bt"
+            "b1 b2";
+
         }
 
         .buy-card{
@@ -38,20 +43,23 @@
             }
         }
 
-        #buy-card-left{
-        grid-area: left-card;
-        border: 2px solid var(--navy);
+        #bt{
+            grid-area: bt;
+        }
+
+        #b1{
+            grid-area: b1;
+            border: 2px solid var(--navy);
 
             >div{
                 border-bottom: 1px solid var(--black);
             }
         }
 
-        #buy-card-right{
-        grid-area: right-card;
-
-        background-color: var(--navy);
-        color: white;
+        #b2{
+            grid-area: b2;
+            background-color: var(--navy);
+            color: white;
             >div{
                 border-bottom: 1px solid var(--white);
             }
