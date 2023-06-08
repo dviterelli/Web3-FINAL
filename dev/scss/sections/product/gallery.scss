@@ -1,118 +1,157 @@
-#gallery{
+#gallery {
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". gallery ";
 
-    @include xl{
+    @include xl {
         grid-template-columns: auto 1200px auto;
     }
 
-    ul{
+    ul {
         grid-area: gallery;
+        @include md{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "g1 g1"
+                "g4 g5";
 
-        @include xl{
-            grid-template-columns: repeat(8, 1fr);
-            grid-template-areas: 
-            "g1 g1 g1 g1 g2 g3 g3 g3"
-            "g1 g1 g1 g1 g2 g3 g3 g3"
-            "g1 g1 g1 g1 g6 g6 g6 g6"
-            "g4 g4 g5 g5 g6 g6 g6 g6"
-            "g4 g4 g5 g5 g9 g9 g10 g10"
-            "g7 g7 g8 g8 g9 g9 g10 g10";
+                gap: 16px;
         }
 
-        li{
+        @include lg{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:
+                "g1 g1 g1 g4"
+                "g1 g1 g1 g5"
+                "g6 g6 g6 g10";
+
+                gap: 16px;
+        }
+
+        @include xl {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-areas:
+                "g1 g1 g1 g1 g2 g3 g3 g3"
+                "g1 g1 g1 g1 g2 g3 g3 g3"
+                "g1 g1 g1 g1 g6 g6 g6 g6"
+                "g4 g4 g5 g5 g6 g6 g6 g6"
+                "g4 g4 g5 g5 g9 g9 g10 g10"
+                "g7 g7 g8 g8 g9 g9 g10 g10";
+
+                gap: 16px;
+        }
+
+        li {
             background-position: center;
             background-size: cover;
         }
 
-        #g1{
+        #g1 {
+            grid-area: g1;
             background-image: url("../img/gallery/gallery1.jpg");
-            width:690px;
-            height:690px;
-            @include xl{
-                grid-area: g1;
-            }
+            width: 690px;
+            height: 690px;
         }
 
-            #g2{
+        #g2 {
+            grid-area: g2;
             background-image: url("../img/gallery/gallery2.jpg");
-            width:130px;
-            height:456px;
+            width: 130px;
+            height: 456px;
+            display: none;
+
             @include xl{
-                grid-area: g2;
+                display: block;
             }
         }
 
-            #g3{
+        #g3 {
+            grid-area: g3;
             background-image: url("../img/gallery/gallery3.jpg");
-            width:456px;
-            height:456px;
+            width: 456px;
+            height: 456px;
+            display: none;
+            
             @include xl{
-                grid-area: g3;
+                display: block;
             }
         }
 
-        #g4{
+        #g4 {
+            grid-area: g4;
             background-image: url("../img/gallery/gallery4.jpg");
             width: 333px;
             height: 333px;
-            @include xl{
-                grid-area: g4;
-            }
         }
 
-        #g5{
+        #g5 {
+            grid-area: g5;
             background-image: url("../img/gallery/gallery5.jpg");
             width: 333px;
-            height: 333px;
-            @include xl{
-                grid-area: g5;
-            }
+            height: 333px;       
         }
-        
-        #g6{
+
+        #g6 {
+            grid-area: g6;
             background-image: url("../img/gallery/gallery6.jpg");
             width: 690px;
             height: 456px;
-            @include xl{
-                grid-area: g6;
-            }
-            }
+            display: none;
 
-        #g7{
+            @include lg{
+                display: block;
+            }
+        }
+
+        #g7 {
+            grid-area: g7;
             background-image: url("../img/gallery/gallery7.jpg");
             width: 333px;
             height: 216px;
+            display: none;
+
             @include xl{
-                grid-area: g7;
+                display: block;
             }
         }
 
-        #g8{
+        #g8 {
+            grid-area: g8;
             background-image: url("../img/gallery/gallery8.jpg");
             width: 333px;
             height: 216px;
+            display: none;
+
             @include xl{
-                grid-area: g8;
+                display: block;
             }
         }
 
-        #g9{
+        #g9 {
+            grid-area: g9;
             background-image: url("../img/gallery/gallery9.jpg");
             width: 333px;
             height: 333px;
+            display: none;
+
             @include xl{
-                grid-area: g9;
+                display: block;
             }
+
         }
 
-        #g10{
+        #g10 {
+            grid-area: g10;
             background-image: url("../img/gallery/gallery10.jpg");
             width: 333px;
             height: 333px;
-            @include xl{
-                grid-area: g10;
+            display: none;
+
+            @include lg{
+                display: block;
             }
         }
     }

@@ -5,29 +5,41 @@
     margin-top: 96px;
     
 
-    @include lg{
-        grid-template-columns: auto 1024px auto;
+    @include md{
+        grid-template-columns: auto 867px auto;
     }
     >div{
         grid-area: reviews;
-        #overview{
+        .stars{
             display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 48px;
-            .stars{
-                li{
-                    display: inline-block;
-                    text-align: center;
-                    flex-direction: row;
-                }
+            li{
+                display: inline-block;
+                text-align: center;
+                flex-direction: row;
             }
         }
+
         #cards{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 8px;
+
+            @include sm{
+                display: grid;
+                grid-template-columns: repeat (4, 1fr);
+                grid-template-areas: 
+                "rt rt rt rt"
+                "ro ro ro ro"
+                "rc1 rc1 rc2 rc2"
+                ". rc3 rc3 .";
+            }
+
+            @include lg{
+                display: grid;
+                grid-template-columns: repeat (3, 1fr);
+                grid-template-areas: 
+                "rt rt rt"
+                "ro ro ro"
+                "rc1 rc2 rc3";
+            }
+            
     
             .review-card{
                 padding: 24px;
@@ -43,20 +55,35 @@
                 img{
                     border-radius: 72px;
                 }
-                .stars{
-                    li{
-                        display: inline-block;
-                        text-align: center;
-                        flex-direction: row;
-                    }
-                }
+               
+            }
+
+           
+
+            #rt{
+                grid-area: rt;
+            }
+
+            #ro{
+                grid-area: ro;
+
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                margin-bottom: 48px;
+
+            }
+            #rc1{
+                grid-area: rc1;
             }
 
             #rc2{
+                grid-area: rc2;
                 padding: 34px;
             }
 
             #rc3{
+                grid-area: rc3;
                 padding: 34px;
             }
         }

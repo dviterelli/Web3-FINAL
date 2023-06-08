@@ -10,11 +10,22 @@
     >div{
         grid-area: features;
 
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas:
-        "ft ft ft ft"
-        "f1 f2 f3 f4";
+        @include sm{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "ft ft"
+            "f1 f2"
+            "f3 f4";
+        }
+
+       @include lg{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:
+            "ft ft ft ft"
+            "f1 f2 f3 f4";
+       }
 
         .card{
             display: flex; 
