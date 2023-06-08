@@ -731,6 +731,9 @@ footer > div #f5 ul li {
   gap: 8px;
   text-align: center;
 }
+#reviews > div #cards .review-card img {
+  border-radius: 72px;
+}
 #reviews > div #cards .review-card .stars li {
   display: inline-block;
   text-align: center;
