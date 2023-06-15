@@ -32,10 +32,10 @@ header{
     grid-template-areas:"logo, nav";
 
     @include md{
-        grid-template-columns: 60% auto;
+        grid-template-columns: 90% auto;
     }
 
-    @include lg{
+    @include xl{
         grid-template-columns: 70% auto;
     }
     
@@ -44,8 +44,35 @@ header{
         justify-content: space-between;
         align-items: center;
 
-        img{
+        a{
+            color: white;
+            text-decoration: none;
+            display: none;
+
+            @include xl{
+                display: block
+            }
+        }
+        
+        #search{
             height: 45%;
+            display: none;
+
+            @include xl{
+                display: block;
+            }
+        }
+
+        #cart{
+            height: 45%;
+        }
+
+        #burger{
+            height: 45%;
+
+            @include xl{
+                display: none;
+            }
         }
     }
    }

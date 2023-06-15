@@ -51,11 +51,11 @@
   >div{
     grid-area: forms;
 
-  @include md{
+    @include md{
     display: grid;
     grid-template-columns: 30%, auto;
     grid-template-areas: "quick payment";
-  }
+    }
     
     #quick{
       grid-area: quick;
@@ -63,11 +63,28 @@
       display:flex;
       flex-direction: column;
       align-items: center;
+      gap: 8px;
     }
 
     #payment{
       grid-area: payment;
+
+      input{
+        padding: 24px;
+        padding-left: 64px;
+        padding-right: 64px;
+        margin: 8px;
+
+      }
     }
 
+    button{
+      color: white;
+      background-color: var(--navy);
+      padding: 24px;
+      padding-left: 64px;
+      padding-right: 64px;
+    }
+margin-bottom: 96px;
   }
 }

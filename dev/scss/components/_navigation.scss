@@ -1,3 +1,59 @@
 /* =============
     Navigation
 ============= */
+
+html{
+    scroll-behavior: smooth;
+}
+
+a:link, a:visited{
+    text-decoration:  none;
+}
+
+.show-menu{
+    display: block !important;
+}
+
+nav{
+    text-align: right;
+    padding-top: 48px;
+    display: none;
+
+    @include lg{
+        display: block;
+        padding-top: 0px;
+    }
+
+    ul{
+        @include lg{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+        }
+
+        li{
+            margin-bottom: 24px;
+            @include lg{
+                margin-bottom: 0;
+            }
+
+            a:link,a:visited{
+                color: var(--white);
+                font-size: rem-calc(30);
+                padding: 24px 0;
+                transition: 0.25s;
+
+                @include lg{
+                    padding: 0px 0px 0px 24px;
+                    font-size: rem-calc(25);
+                    font-weight: 300;
+                }
+
+                &:hover, &:active{
+                    color: var(--grey-light);
+                }
+            }
+        }
+    }
+}

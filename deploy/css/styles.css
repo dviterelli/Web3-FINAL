@@ -341,6 +341,10 @@ ul li {
   list-style: none;
 }
 
+.content-space-top {
+  margin-top: 96px;
+}
+
 /* =============
     Typography
 ============= */
@@ -372,6 +376,62 @@ textarea {
 /* =============
     Navigation
 ============= */
+html {
+  scroll-behavior: smooth;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+.show-menu {
+  display: block !important;
+}
+
+nav {
+  text-align: right;
+  padding-top: 48px;
+  display: none;
+}
+@media (min-width: 1024px) {
+  nav {
+    display: block;
+    padding-top: 0px;
+  }
+}
+@media (min-width: 1024px) {
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+  }
+}
+nav ul li {
+  margin-bottom: 24px;
+}
+@media (min-width: 1024px) {
+  nav ul li {
+    margin-bottom: 0;
+  }
+}
+nav ul li a:link, nav ul li a:visited {
+  color: var(--white);
+  font-size: 1.875rem;
+  padding: 24px 0;
+  transition: 0.25s;
+}
+@media (min-width: 1024px) {
+  nav ul li a:link, nav ul li a:visited {
+    padding: 0px 0px 0px 24px;
+    font-size: 1.5625rem;
+    font-weight: 300;
+  }
+}
+nav ul li a:link:hover, nav ul li a:link:active, nav ul li a:visited:hover, nav ul li a:visited:active {
+  color: var(--grey-light);
+}
+
 /* =============
     Header
 ============= */
@@ -402,10 +462,10 @@ header > div #logo {
 }
 @media (min-width: 768px) {
   header > div {
-    grid-template-columns: 60% auto;
+    grid-template-columns: 90% auto;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   header > div {
     grid-template-columns: 70% auto;
   }
@@ -415,8 +475,35 @@ header > div #nav {
   justify-content: space-between;
   align-items: center;
 }
-header > div #nav img {
+header > div #nav a {
+  color: white;
+  text-decoration: none;
+  display: none;
+}
+@media (min-width: 1200px) {
+  header > div #nav a {
+    display: block;
+  }
+}
+header > div #nav #search {
   height: 45%;
+  display: none;
+}
+@media (min-width: 1200px) {
+  header > div #nav #search {
+    display: block;
+  }
+}
+header > div #nav #cart {
+  height: 45%;
+}
+header > div #nav #burger {
+  height: 45%;
+}
+@media (min-width: 1200px) {
+  header > div #nav #burger {
+    display: none;
+  }
 }
 
 /* =============
@@ -504,25 +591,45 @@ footer > div #f5 ul li {
 #hero {
   margin-top: 96px;
   display: grid;
-  grid-template-columns: 16px auto 16px;
+  grid-template-columns: 8px auto 8px;
   grid-template-areas: ". hero .";
+}
+@media (min-width: 768px) {
+  #hero {
+    grid-template-columns: auto 786px auto;
+  }
+}
+@media (min-width: 1024px) {
+  #hero {
+    grid-template-columns: auto 1024px auto;
+  }
+}
+@media (min-width: 1200px) {
+  #hero {
+    grid-template-columns: auto 1200px auto;
+  }
 }
 #hero > div {
   grid-area: hero;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   #hero > div #card {
     display: grid;
-    grid-template-columns: 60% auto;
+    grid-template-columns: 70% auto;
     grid-template-areas: "img type";
+  }
+}
+@media (min-width: 1200px) {
+  #hero > div #card {
+    grid-template-columns: 60% auto;
   }
 }
 #hero > div #card #hero-img {
   grid-area: img;
   background-image: url("../img/hero/hero.jpg");
   background-size: cover;
-  width: 690px;
-  height: 690px;
+  width: 50vh;
+  height: 50vh;
 }
 #hero > div #card #in-the-box {
   grid-area: type;
@@ -580,14 +687,24 @@ footer > div #f5 ul li {
 #gallery {
   display: grid;
   grid-template-columns: 16px auto 16px;
-  grid-template-areas: ". gallery ";
+  grid-template-areas: ". gallery .";
+}
+@media (min-width: 768px) {
+  #gallery {
+    grid-template-columns: auto 786px auto;
+  }
+}
+@media (min-width: 1024px) {
+  #gallery {
+    grid-template-columns: auto 1024px auto;
+  }
 }
 @media (min-width: 1200px) {
   #gallery {
     grid-template-columns: auto 1200px auto;
   }
 }
-#gallery ul {
+#gallery > div {
   grid-area: gallery;
 }
 @media (min-width: 768px) {
@@ -623,6 +740,12 @@ footer > div #f5 ul li {
   background-image: url("../img/gallery/gallery1.jpg");
   width: 690px;
   height: 690px;
+  display: none;
+}
+@media (min-width: 768px) {
+  #gallery ul #g1 {
+    display: block;
+  }
 }
 #gallery ul #g2 {
   grid-area: g2;
@@ -822,6 +945,10 @@ footer > div #f5 ul li {
 #buynow > div .buy-card button {
   color: white;
   background-color: var(--pink);
+  padding: 24px;
+  padding-left: 96px;
+  padding-right: 96px;
+  border-radius: 48px;
 }
 #buynow > div .buy-card-info ul li {
   display: flex;
@@ -896,6 +1023,7 @@ footer > div #f5 ul li {
 }
 #forms > div {
   grid-area: forms;
+  margin-bottom: 96px;
 }
 @media (min-width: 768px) {
   #forms > div {
@@ -909,9 +1037,23 @@ footer > div #f5 ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 8px;
 }
 #forms > div #payment {
   grid-area: payment;
+}
+#forms > div #payment input {
+  padding: 24px;
+  padding-left: 64px;
+  padding-right: 64px;
+  margin: 8px;
+}
+#forms > div button {
+  color: white;
+  background-color: var(--navy);
+  padding: 24px;
+  padding-left: 64px;
+  padding-right: 64px;
 }
 
 #thanks-hero {

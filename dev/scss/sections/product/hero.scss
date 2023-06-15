@@ -1,17 +1,32 @@
 #hero{
     margin-top: 96px;
     display: grid;
-    grid-template-columns: 16px auto 16px;
+    grid-template-columns: 8px auto 8px;
     grid-template-areas: ". hero .";
+
+    @include md{
+        grid-template-columns: auto 786px auto;
+    }
+    @include lg{
+        grid-template-columns: auto 1024px auto;
+    }
+
+    @include xl {
+        grid-template-columns: auto 1200px auto;
+    }
 
     >div{
         grid-area: hero;
 
         #card{
-            @include lg{
+            @include md{
                 display: grid;
-                grid-template-columns: 60% auto;
+                grid-template-columns: 70% auto;
                 grid-template-areas: "img type";
+            }
+
+            @include xl{
+                grid-template-columns: 60% auto;
             }
 
             #hero-img{
@@ -19,8 +34,8 @@
 
                 background-image: url("../img/hero/hero.jpg");
                 background-size: cover;
-                width: 690px;
-                height: 690px;
+                width: 50vh;
+                height: 50vh;
             }
             
             #in-the-box{

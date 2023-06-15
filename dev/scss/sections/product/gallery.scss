@@ -1,14 +1,25 @@
 #gallery {
     display: grid;
     grid-template-columns: 16px auto 16px;
-    grid-template-areas: ". gallery ";
+    grid-template-areas: ". gallery .";
+
+    @include md{
+        grid-template-columns: auto 786px auto;
+    }
+
+    @include lg{
+        grid-template-columns: auto 1024px auto;
+    }
 
     @include xl {
         grid-template-columns: auto 1200px auto;
     }
 
-    ul {
+    >div{
         grid-area: gallery;
+    }
+
+    ul{
         @include md{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -54,6 +65,11 @@
             background-image: url("../img/gallery/gallery1.jpg");
             width: 690px;
             height: 690px;
+            display: none;
+        
+            @include md{
+                display: block;
+            }
         }
 
         #g2 {
